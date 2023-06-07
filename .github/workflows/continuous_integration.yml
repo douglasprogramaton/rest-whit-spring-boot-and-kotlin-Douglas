@@ -25,11 +25,11 @@ jobs:
         cache: maven
     
     - name: Build Application Jar
-      working-directory: ./rest-whit-spring-boot-and-kotlin-Douglas/tree/main/rest-whit-spring-boot-and-kotlin
+      working-directory: ./rest-whit-spring-boot-and-kotlin
       run: mvn clean package
     
     - name: Docker Compose Build
-      working-directory: ./rest-whit-spring-boot-and-kotlin-Douglas/
+      working-directory: ./rest-whit-spring-boot-and-kotlin-Douglas
       run: docker compose build
     
     - name: Push to Docker Hub Container registry
