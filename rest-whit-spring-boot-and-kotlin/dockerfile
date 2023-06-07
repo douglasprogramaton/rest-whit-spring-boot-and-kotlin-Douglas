@@ -1,0 +1,8 @@
+#docker image  do openjdk
+FROM openjdk:19-jdk-slim
+#cria o argumento dizendo onde está o jar_File
+ARG JAR_FILE=target/*.jar
+#copia o argumento para dentro de um container chamando app.jar
+COPY ${JAR_FILE} app.jar
+RUN bash -c 'touch /app.jar'
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
