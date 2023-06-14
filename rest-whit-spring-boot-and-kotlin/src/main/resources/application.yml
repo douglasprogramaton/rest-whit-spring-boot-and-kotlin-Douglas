@@ -9,8 +9,8 @@
 #      spring:
 #        datasource:
 #          url: jdbc:postgresql://localhost:5432/rest_with_spring_boot
-#          username: postgres
-#          password: Douglas12957534@
+#          username: root
+#          password: admin
 #        jpa:
 #          hibernate:
 #            ddl-auto: none
@@ -46,7 +46,7 @@
               driver-class-name: com.mysql.cj.jdbc.Driver
               url: jdbc:mysql://localhost:3306/rest_with_spring_boot?useTimezone=true&serverTimezone=UTC
               username: root
-              password: admin123
+              password: admin
             jpa:
               hibernate:
                 ddl-auto: none
