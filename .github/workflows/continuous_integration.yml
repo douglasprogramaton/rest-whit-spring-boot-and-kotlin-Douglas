@@ -20,7 +20,7 @@ jobs:
     - name: Setup Java JDK
       uses: actions/setup-java@v2
       with:
-        java-version: '17'
+        java-version: '18'
         distribution: 'adopt'
         cache: maven
     
@@ -29,12 +29,12 @@ jobs:
       run: mvn clean package
     
     - name: Docker Compose Build
-      working-directory: ./rest-whit-spring-boot-and-kotlin-Douglas
+      working-directory: ./rest-whit-spring-boot-and-kotlin-Douglas/
       run: docker compose build
     
     - name: Push to Docker Hub Container registry
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot:latest ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot:${{github.run_id}}
+       docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot:latest douglasaraujosantos/rest-with-spring-boot:${{github.run_id}}
         
         docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot:${{github.run_id}}
         docker push ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot:latest
