@@ -16,7 +16,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<java.version>18</java.version>
+		<java.version>17</java.version>
 		<kotlin.version>1.8.0</kotlin.version>
 		<dozer.version>6.4.1</dozer.version>
 		<springdoc.version>2.0.2</springdoc.version>
